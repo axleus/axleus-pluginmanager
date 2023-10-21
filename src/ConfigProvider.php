@@ -10,11 +10,16 @@ final class ConfigProvider
     {
         return [
             'dependencies' => $this->getDependencies(),
+            'plugin'       => [],
         ];
     }
 
     public function getDependencies(): array
     {
-        return [];
+        return [
+            'delegators' => [],
+            'factories'  => [],
+            'aliases'    => [],
+        ];
     }
 }
